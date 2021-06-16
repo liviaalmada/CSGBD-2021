@@ -30,8 +30,8 @@ public class BufferPoolManager {
 	 * Cria um novo BufferPoolManager. 
 	 * @param poolSize a quantidade de frames do buffer pool
 	 */
-	BufferPoolManager(int poolSize) {
-
+	public BufferPoolManager(int poolSize) {
+		
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class BufferPoolManager {
    * @param pageId o id da página requisitada
    * @return a página requisitada
    */
-	Page fetchPageImpl(int pageId) {
+	public Page fetchPageImpl(int pageId) {
 		return null;
 	}
 
@@ -49,7 +49,7 @@ public class BufferPoolManager {
    * @return null se nenhum página foi alocada
    *  		 o objeto representando a página, c.c.
    */
-	Page newPageImpl(int pageId) {
+	public Page newPageImpl(int pageId) {
 		return null;
 	};
 	
@@ -60,7 +60,7 @@ public class BufferPoolManager {
    * 		da página deve ser marcado como true, false c.c.
    * @return false se antes da chamada o pinCount <= 0, true c.c.
    */
-	boolean unpinPageImpl(int pageId, boolean isDirty) {
+	public boolean unpinPageImpl(int pageId, boolean isDirty) {
 		return false;
 	}
 
@@ -71,7 +71,7 @@ public class BufferPoolManager {
    * @return 	false se a página existe mas não pode ser removida (está em uso), 
    * 			true se a página não existe ou foi removida com sucesso
    */
-	void deletePageImpl(int pageId) {
+	public void deletePageImpl(int pageId) {
 		
 	}
 	
@@ -79,7 +79,7 @@ public class BufferPoolManager {
 	* Escreve todas as páginas no disco.
 	*  @return true se foi realizada com sucesso, false c.c.
 	*/
-	boolean flushAllPagesImpl() {
+	public boolean flushAllPagesImpl() {
 		return false;
 	}
 	
@@ -88,7 +88,7 @@ public class BufferPoolManager {
 	 * @param pageId
 	 * @return true se foi realizada com sucesso, false c.c.
 	 */
-	boolean flushPageImpl(int pageId) {
+	public boolean flushPageImpl(int pageId) {
 		return false;
 	}
 

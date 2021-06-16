@@ -10,7 +10,7 @@ public abstract class Replacer {
 	 * @return armazena o conteúdo da página vítima no parâmetro de saída e o
 	 *         retorna. Se o Replacer estiver vazio, retorne null.
 	 */
-	abstract Page victim();
+	public abstract Page victim();
 
 	/**
 	 *  Marca um frame, indicando que ele não deve ser vítima 
@@ -18,7 +18,7 @@ public abstract class Replacer {
 	 *  Este método deve ser chamado depois que uma página
 	 *  é alocada em um frame no BufferPoolManager.
 	 */
-	void pin(int frameId) {
+	public void pin(int frameId) {
 		
 	}
 
@@ -28,14 +28,14 @@ public abstract class Replacer {
 	 * torna-se 0. Este método deve adicionar o frame que contém 
 	 * a página desmarcada ao Replacer.
 	 */
-	void unpin(int frameId) {
+	public void unpin(int frameId) {
 		
 	}
 
 	/**Este método retorna o número de frames
 	 * que podem ser escolhidos como vítimas .	  
 	 */
-	int size() {
+	public int size() {
 		return 0;
 	}
 

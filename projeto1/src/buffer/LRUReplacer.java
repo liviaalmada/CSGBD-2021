@@ -3,12 +3,13 @@ package buffer;
 import storage.Page;
 
 public class LRUReplacer extends Replacer{
+	
 
-	LRUReplacer(int numPages) {
+	public LRUReplacer(int numPages) {
 		
 	}
 
-	LRUReplacer() {
+	public LRUReplacer() {
 		
 	}	
 
